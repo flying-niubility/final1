@@ -1,0 +1,13 @@
+{
+  "categories": ["学术科技", "人文艺术", "就业指导", "创新创业"],
+  "lectures": [
+    { "id": 1, "title": "人工智能的未来与机遇",       "speaker": "张明远", "category": "学术科技", "location": "图书馆报告厅",     "date": "2026-10-08", "time": "19:00", "capacity": 300, "signed": 246 },
+    { "id": 2, "title": "量子计算入门",               "speaker": "刘振华", "category": "学术科技", "location": "理科楼阶梯教室",   "date": "2026-10-09", "time": "14:00", "capacity": 200, "signed": 120 },
+    { "id": 3, "title": "中国古诗词的意境之美",       "speaker": "李若兰", "category": "人文艺术", "location": "文科楼报告厅",     "date": "2026-10-10", "time": "19:00", "capacity": 200, "signed": 178 },
+    { "id": 4, "title": "敦煌壁画艺术赏析",           "speaker": "赵雅芝", "category": "人文艺术", "location": "艺术楼展厅",       "date": "2026-10-11", "time": "15:00", "capacity": 100, "signed": 88 },
+    { "id": 5, "title": "大学生职业规划与简历制作",   "speaker": "王海涛", "category": "就业指导", "location": "学生活动中心",     "date": "2026-10-12", "time": "19:00", "capacity": 150, "signed": 132 },
+    { "id": 6, "title": "考研英语高分攻略",           "speaker": "孙晓峰", "category": "就业指导", "location": "教学楼A101",       "date": "2026-10-13", "time": "18:30", "capacity": 250, "signed": 210 },
+    { "id": 7, "title": "从0到1：大学生创业实战",     "speaker": "陈志强", "category": "创新创业", "location": "创业学院路演厅",   "date": "2026-10-14", "time": "19:00", "capacity": 120, "signed": 98 },
+    { "id": 8, "title": "互联网产品经理成长之路",     "speaker": "周雨桐", "category": "创新创业", "location": "信息楼报告厅",     "date": "2026-10-15", "time": "14:30", "capacity": 180, "signed": 156 }
+  ]
+}

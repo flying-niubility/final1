@@ -1,0 +1,18 @@
+{
+  "canteens": ["第一食堂", "第二食堂", "清真食堂"],
+  "flavors": ["家常菜", "川菜", "粤菜", "江浙菜", "西北菜", "面食", "轻食"],
+  "dishes": [
+    { "id": 1,  "name": "红烧肉",         "canteen": "第一食堂", "window": "2号窗口", "flavor": "家常菜", "price": 12, "rating": 4.7, "tags": ["招牌", "微甜"] },
+    { "id": 2,  "name": "番茄炒蛋",       "canteen": "第一食堂", "window": "1号窗口", "flavor": "家常菜", "price": 6,  "rating": 4.5, "tags": ["下饭"] },
+    { "id": 3,  "name": "麻辣香锅",       "canteen": "第一食堂", "window": "5号窗口", "flavor": "川菜",   "price": 18, "rating": 4.8, "tags": ["重辣", "可自选"] },
+    { "id": 4,  "name": "酸菜鱼",         "canteen": "第一食堂", "window": "6号窗口", "flavor": "川菜",   "price": 20, "rating": 4.6, "tags": ["酸辣"] },
+    { "id": 5,  "name": "黄焖鸡米饭",     "canteen": "第二食堂", "window": "3号窗口", "flavor": "江浙菜", "price": 14, "rating": 4.6, "tags": ["热卖"] },
+    { "id": 6,  "name": "广式叉烧饭",     "canteen": "第二食堂", "window": "4号窗口", "flavor": "粤菜",   "price": 16, "rating": 4.4, "tags": ["蜜汁"] },
+    { "id": 7,  "name": "虾仁云吞面",     "canteen": "第二食堂", "window": "2号窗口", "flavor": "粤菜",   "price": 13, "rating": 4.3, "tags": ["清淡"] },
+    { "id": 8,  "name": "扬州炒饭",       "canteen": "第二食堂", "window": "1号窗口", "flavor": "江浙菜", "price": 10, "rating": 4.2, "tags": ["快手餐"] },
+    { "id": 9,  "name": "轻食鸡胸沙拉",   "canteen": "第二食堂", "window": "轻食窗口", "flavor": "轻食",  "price": 15, "rating": 4.5, "tags": ["低卡", "健身推荐"] },
+    { "id": 10, "name": "兰州拉面",       "canteen": "清真食堂", "window": "1号窗口", "flavor": "面食",   "price": 11, "rating": 4.9, "tags": ["招牌", "现拉"] },
+    { "id": 11, "name": "大盘鸡",         "canteen": "清真食堂", "window": "2号窗口", "flavor": "西北菜", "price": 22, "rating": 4.7, "tags": ["分量足", "微辣"] },
+    { "id": 12, "name": "肉夹馍",         "canteen": "清真食堂", "window": "3号窗口", "flavor": "面食",   "price": 8,  "rating": 4.4, "tags": ["酥脆"] }
+  ]
+}

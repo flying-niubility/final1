@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="智慧校园公共服务信息中心：食堂美食、自习室座位、讲座活动信息查询与数据展示">
+  <title>智慧校园 · 首页</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- 自定义样式 -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Three.js ES Module 映射 -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========== 顶部导航 ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="index.html">
+        <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+        智慧校园
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="切换导航">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1"></i>首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="canteen.html"><i class="fa-solid fa-bowl-food me-1"></i>食堂美食</a></li>
+          <li class="nav-item"><a class="nav-link" href="studyroom.html"><i class="fa-solid fa-book-open-reader me-1"></i>自习室</a></li>
+          <li class="nav-item"><a class="nav-link" href="lecture.html"><i class="fa-solid fa-chalkboard-user me-1"></i>讲座活动</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== 英雄区 ========== -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="hero-badge"><i class="fa-solid fa-wifi me-1"></i>Campus Hub · 校园公共服务一站通</span>
+          <h1 id="heroTitle">智慧校园公共服务信息中心</h1>
+          <p class="lead mt-3" id="heroSubtitle">食堂美食、自习座位、讲座活动，一屏尽览校园学习生活</p>
+          <div class="hero-actions mt-4 d-flex flex-wrap gap-2">
+            <a href="canteen.html" class="btn btn-light"><i class="fa-solid fa-utensils me-2"></i>今天吃什么</a>
+            <a href="studyroom.html" class="btn btn-outline-light"><i class="fa-solid fa-magnifying-glass me-2"></i>找自习座位</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="hero-illustration"><i class="fa-solid fa-school"></i></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== 数据统计 ========== -->
+    <section class="container mt-4 mt-lg-n5">
+      <div class="row g-3" id="statsRow">
+        <div class="col-6 col-lg-3">
+          <div class="card-soft stat-card">
+            <span class="stat-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <div><div class="stat-value" data-target="18">0<span class="unit">个</span></div><div class="stat-label">开放服务场所</div></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft stat-card">
+            <span class="stat-icon c-orange"><i class="fa-solid fa-bowl-food"></i></span>
+            <div><div class="stat-value" data-target="86">0<span class="unit">道</span></div><div class="stat-label">今日在售菜品</div></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft stat-card">
+            <span class="stat-icon c-teal"><i class="fa-solid fa-chair"></i></span>
+            <div><div class="stat-value" data-target="2400">0<span class="unit">个</span></div><div class="stat-label">自习座位</div></div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-soft stat-card">
+            <span class="stat-icon c-sky"><i class="fa-solid fa-chalkboard-user"></i></span>
+            <div><div class="stat-value" data-target="12">0<span class="unit">场</span></div><div class="stat-label">本周讲座</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 三维校园 ========== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-cube"></i>三维校园导览</h2>
+        <p class="section-subtitle">拖拽旋转视角、滚轮缩放，点击建筑可直接进入对应服务页面</p>
+        <div class="campus-wrap">
+          <div class="campus-tip"><i class="fa-solid fa-hand-pointer me-1"></i>拖拽旋转 · 滚轮缩放 · 点击建筑进入</div>
+          <div id="campus3d"></div>
+          <div id="campusTooltip" class="campus-tooltip"></div>
+        </div>
+        <div class="campus-legend">
+          <span><i class="legend-dot" style="background:#3b82f6"></i>图书馆 → 自习室</span>
+          <span><i class="legend-dot" style="background:#fb923c"></i>第一食堂 → 食堂美食</span>
+          <span><i class="legend-dot" style="background:#a855f7"></i>学术报告厅 → 讲座活动</span>
+          <span><i class="legend-dot" style="background:#22c55e"></i>体育馆（建设中）</span>
+          <span><i class="legend-dot" style="background:#eab308"></i>学生宿舍（建设中）</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 数据图表 ========== -->
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-chart-line"></i>校园数据看板</h2>
+        <p class="section-subtitle">数据来自本地 JSON 文件，每小时自动更新（模拟）</p>
+        <div class="row g-3">
+          <div class="col-lg-8">
+            <div class="card-soft p-3 h-100">
+              <h6 class="fw-bold mb-2"><i class="fa-solid fa-clock me-1 text-primary-c"></i>今日各食堂客流趋势</h6>
+              <div id="trafficChart" class="chart-box"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card-soft p-3 h-100">
+              <h6 class="fw-bold mb-2"><i class="fa-solid fa-gauge-high me-1 text-primary-c"></i>今日校园场所使用率</h6>
+              <div id="usageChart" class="chart-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 快捷服务 + 公告 ========== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <h2 class="section-title"><i class="fa-solid fa-bolt"></i>快捷服务</h2>
+            <p class="section-subtitle">学习生活高频场景，一键直达</p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <a class="card-soft service-card" href="canteen.html">
+                  <span class="svc-icon svc-canteen"><i class="fa-solid fa-bowl-food"></i></span>
+                  <h5>食堂美食</h5>
+                  <p>搜索菜品、按食堂与口味筛选、查看价格与评分</p>
+                  <span class="go-link">立即前往 <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="card-soft service-card" href="studyroom.html">
+                  <span class="svc-icon svc-room"><i class="fa-solid fa-book-open-reader"></i></span>
+                  <h5>自习室查询</h5>
+                  <p>实时座位占用、按楼栋筛选、在线预约座位</p>
+                  <span class="go-link">立即前往 <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="card-soft service-card" href="lecture.html">
+                  <span class="svc-icon svc-lecture"><i class="fa-solid fa-chalkboard-user"></i></span>
+                  <h5>讲座活动</h5>
+                  <p>学术、人文、就业讲座一览，在线报名占位</p>
+                  <span class="go-link">立即前往 <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="col-sm-6">
+                <a class="card-soft service-card" href="javascript:void(0)" id="busSoon">
+                  <span class="svc-icon svc-bus"><i class="fa-solid fa-bus"></i></span>
+                  <h5>校车时刻</h5>
+                  <p>校车线路与实时位置（功能规划中）</p>
+                  <span class="go-link">敬请期待</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <h2 class="section-title"><i class="fa-solid fa-bullhorn"></i>校园公告</h2>
+            <p class="section-subtitle">服务调整与重要通知</p>
+            <div class="d-flex flex-column gap-2" id="noticeList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-5">
+          <h6>智慧校园公共服务信息中心</h6>
+          <p class="mb-1">本项目为前端课程设计作品，展示校园食堂、自习室、讲座等公共服务信息与数据。</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6>快速链接</h6>
+          <a href="canteen.html">食堂美食</a>
+          <a href="studyroom.html">自习室</a>
+          <a href="lecture.html">讲座活动</a>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6>技术支持</h6>
+          <a href="javascript:void(0)">Bootstrap 5 + jQuery</a>
+          <a href="javascript:void(0)">ECharts 数据可视化</a>
+          <a href="javascript:void(0)">Three.js 三维展示</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="currentYear"></span> 智慧校园 Campus Hub · 课程设计作品 · 数据仅供演示</div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  <!-- 降级数据 + 公共脚本 + 首页脚本 -->
+  <script src="js/fallback-data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+
+  <!-- Three.js 三维校园 -->
+  <script type="module" src="js/campus3d.js"></script>
+
+  <!-- 三维资源加载看门狗：CDN 不可用时给出错误提示 -->
+  <script>
+    setTimeout(function () {
+      var box = document.getElementById("campus3d");
+      if (box && !box.querySelector("canvas")) {
+        box.innerHTML =
+          '<div class="state-box"><i class="fa-solid fa-wifi"></i>' +
+          "<p>三维场景加载失败，请检查网络连接后刷新页面（Three.js 需从 CDN 加载）</p></div>";
+      }
+    }, 9000);
+  </script>
+</body>
+</html>

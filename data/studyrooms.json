@@ -1,0 +1,14 @@
+{
+  "buildings": ["图书馆", "教学楼A", "教学楼B", "信息楼"],
+  "timeSlots": ["上午 08:00-12:00", "下午 14:00-18:00", "晚上 19:00-22:00"],
+  "rooms": [
+    { "id": 1, "name": "二层静音阅览区", "building": "图书馆",   "floor": "2层", "totalSeats": 240, "occupied": 186, "openTime": "07:00-23:00", "features": ["静音", "插座", "WiFi", "空调"] },
+    { "id": 2, "name": "三层讨论自习区", "building": "图书馆",   "floor": "3层", "totalSeats": 120, "occupied": 120, "openTime": "07:00-22:30", "features": ["可讨论", "插座", "WiFi"] },
+    { "id": 3, "name": "A301 自习室",    "building": "教学楼A",  "floor": "3层", "totalSeats": 96,  "occupied": 72,  "openTime": "07:30-22:00", "features": ["静音", "空调", "WiFi"] },
+    { "id": 4, "name": "A405 考研专区",  "building": "教学楼A",  "floor": "4层", "totalSeats": 80,  "occupied": 78,  "openTime": "06:30-23:00", "features": ["考研专属", "插座", "静音"] },
+    { "id": 5, "name": "B201 自习室",    "building": "教学楼B",  "floor": "2层", "totalSeats": 110, "occupied": 48,  "openTime": "08:00-21:30", "features": ["WiFi", "空调"] },
+    { "id": 6, "name": "B203 自习室",    "building": "教学楼B",  "floor": "2层", "totalSeats": 100, "occupied": 35,  "openTime": "08:00-21:30", "features": ["可朗读", "WiFi"] },
+    { "id": 7, "name": "信息楼 105 机房", "building": "信息楼",  "floor": "1层", "totalSeats": 64,  "occupied": 52,  "openTime": "08:30-22:00", "features": ["电脑", "网线", "空调"] },
+    { "id": 8, "name": "信息楼 208 研习室", "building": "信息楼", "floor": "2层", "totalSeats": 50, "occupied": 12,  "openTime": "09:00-21:00", "features": ["白板", "插座", "小组讨论"] }
+  ]
+}

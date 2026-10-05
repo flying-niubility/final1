@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "智慧校园公共服务信息中心",
+    "subtitle": "食堂美食、自习座位、讲座活动，一屏尽览校园学习生活"
+  },
+  "stats": [
+    { "label": "开放服务场所", "value": 18, "unit": "个", "icon": "fa-building-columns" },
+    { "label": "今日在售菜品", "value": 86, "unit": "道", "icon": "fa-bowl-food" },
+    { "label": "自习座位", "value": 2400, "unit": "个", "icon": "fa-chair" },
+    { "label": "本周讲座", "value": 12, "unit": "场", "icon": "fa-chalkboard-user" }
+  ],
+  "trafficHours": ["07:00", "09:00", "11:00", "13:00", "15:00", "17:00", "19:00", "21:00"],
+  "canteenTraffic": [
+    {
+      "name": "第一食堂",
+      "data": [180, 95, 460, 320, 110, 480, 260, 90]
+    },
+    {
+      "name": "第二食堂",
+      "data": [150, 80, 420, 300, 95, 440, 240, 75]
+    },
+    {
+      "name": "清真食堂",
+      "data": [90, 45, 260, 180, 60, 280, 150, 40]
+    }
+  ],
+  "venueUsage": [
+    { "name": "自习室", "value": 62 },
+    { "name": "图书馆", "value": 71 },
+    { "name": "食堂", "value": 78 },
+    { "name": "运动场馆", "value": 45 },
+    { "name": "校车", "value": 34 }
+  ],
+  "notices": [
+    { "type": "success", "icon": "fa-circle-check", "text": "图书馆三层静音区今日延长开放至 23:00" },
+    { "type": "warning", "icon": "fa-triangle-exclamation", "text": "10月5日 08:00-12:00 教学楼A停电检修，请转移至教学楼B自习" },
+    { "type": "info", "icon": "fa-bullhorn", "text": "国庆专题讲座《敦煌壁画艺术赏析》本周五开放报名" }
+  ]
+}
